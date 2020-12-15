@@ -42,7 +42,7 @@ namespace PaymentContext.Tests
 		[DataRow("724643650")]
 		[DataRow("339062880050")]
 		[DataRow("69427694016")]
-		public void ShouldReturnSuccessWhenCPFIsInvalid(string cpf)
+		public void ShouldReturnErrorWhenCPFIsInvalid(string cpf)
 		{
 			var doc = new Document(cpf, EDocumentType.CPF);
 			Assert.IsTrue(doc.Invalid);

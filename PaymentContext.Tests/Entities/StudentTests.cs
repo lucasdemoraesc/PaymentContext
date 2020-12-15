@@ -37,6 +37,7 @@ namespace PaymentContext.Tests
 			Assert.IsTrue(_student.Invalid);
 		}
 
+		[TestMethod]
 		public void ShouldReturnErrorWhenHadActiveSubscriptionHasNoPayment()
 		{
 			_student.AddSubscription(_subscription);

@@ -20,10 +20,9 @@ namespace PaymentContext.Domain.Commands
 		public DateTime ExpireDate { get; set; }
 		public decimal Total { get; set; }
 		public decimal TotalPaid { get; set; }
-
 		public string Payer { get; set; }
 		public Document PayerDocument { get; set; }
-		public EDocumentType Documenttype { get; set; }
+		public EDocumentType DocumentType { get; set; }
 		public string PayerEmail { get; set; }
 		public string Street { get; set; }
 		public string Number { get; set; }
@@ -32,6 +31,5 @@ namespace PaymentContext.Domain.Commands
 		public string State { get; set; }
 		public string Country { get; set; }
 		public string ZipCode { get; set; }
-
 	}
 }

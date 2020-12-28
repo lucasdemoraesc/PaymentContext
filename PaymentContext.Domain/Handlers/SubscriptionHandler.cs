@@ -69,6 +69,10 @@ namespace PaymentContext.Domain.Handlers
 			subscription.AddPayment(payment);
 			student.AddSubscription(subscription);
 
+			// Checar as notificações
+			if (Invalid)
+				return new CommandResult(false, "Não foi possível realizar sua assinatura");
+
 			// Agrupar as validações
 			AddNotifications(name, document, email, address, student, subscription, payment);
 
@@ -124,6 +128,10 @@ namespace PaymentContext.Domain.Handlers
 			// Relacionamentos
 			subscription.AddPayment(payment);
 			student.AddSubscription(subscription);
+
+			// Checar as notificações
+			if (Invalid)
+				return new CommandResult(false, "Não foi possível realizar sua assinatura");
 
 			// Agrupar as validações
 			AddNotifications(name, document, email, address, student, subscription, payment);
@@ -182,6 +190,10 @@ namespace PaymentContext.Domain.Handlers
 			// Relacionamentos
 			subscription.AddPayment(payment);
 			student.AddSubscription(subscription);
+
+			// Checar as notificações
+			if (Invalid)
+				return new CommandResult(false, "Não foi possível realizar sua assinatura");
 
 			// Agrupar as validações
 			AddNotifications(name, document, email, address, student, subscription, payment);
